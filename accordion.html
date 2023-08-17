@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="accordion.css">
+
+</head>
+<body>
+    <div class="d1">
+        <h1>div1 <i class="fa-solid fa-caret-down" onclick="fun(0)"></i></h1>
+        <div class="cont"><p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+        </div>
+    </div>
+    <div class="d2">
+        <h1>div2 <i class="fa-solid fa-caret-down" onclick="fun(1)"></i></h1>
+        <div class="cont"><p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+</div>
+    </div>
+    <div class="d3">
+        <h1>div3 <i class="fa-solid fa-caret-down" onclick="fun(2)"></i></h1>
+        <div class="cont">
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+
+        </div>
+    </div>
+    <div class="d4">
+        <h1>div4 <i class="fa-solid fa-caret-down" onclick="fun(3)"></i></h1>
+        <div class="cont">
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+           <p>content</p> 
+        </div>
+    </div>
+    <script>
+        let contr=document.getElementsByClassName('cont')
+        let iconr=document.getElementsByClassName('fa-solid')
+        // contr[0].style.display="block";
+        let i=0
+        function fun(e)
+        {
+            if(i==e)
+            {
+                if(contr[i].style.display=="none")
+                {
+                    contr[i].style.display="block";
+                    iconr[i].className="fa-solid fa-caret-up"
+
+                }
+                else
+                {
+                    contr[i].style.display="none";
+                    iconr[i].className="fa-solid fa-caret-down"
+
+                }
+
+            }
+            else{
+                contr[i].style.display="none"
+                iconr[i].className="fa-solid fa-caret-down"
+                contr[e].style.display="block"
+                iconr[e].className="fa-solid fa-caret-up"
+                i=e
+            }        
+        }
+
+    </script>
+    
+</body>
+</html>
